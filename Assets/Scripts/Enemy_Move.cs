@@ -8,6 +8,7 @@ public class Enemy_Move : MonoBehaviour
 {
     public float speed;
     public float length;
+    public float divider;
     public Transform[] moveSpots; //Just Valid for the  move n7
     private float waitTime;
     public float startWaitTime;
@@ -83,7 +84,7 @@ public class Enemy_Move : MonoBehaviour
 
     private void move6()
     {
-        transform.position = new Vector2(Mathf.PingPong(counter, length) + startPosition.x, Mathf.PingPong(counter, length/3) + startPosition.y);
+        transform.position = new Vector2(Mathf.PingPong(counter, length) + startPosition.x, Mathf.PingPong(counter, length/divider) + startPosition.y);
     }
 
     private void move7()
