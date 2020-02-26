@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Global;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -12,25 +13,42 @@ public class PlayerMove : MonoBehaviour
     float run_speed = 40f;
     bool jump = false;
     bool crouch = false;
+    float timer=3;
 
     // Update is called once per frame
     void Update()
     {
-        horizontal_m = Input.GetAxisRaw("Horizontal") * run_speed;
-        animator.SetFloat("Speed", Mathf.Abs(horizontal_m));
-
-        if (Input.GetButtonDown("Jump"))
+        if (GlobalManage.Instance.timer_flag == true)
         {
-            jump = true;
-            animator.SetFloat("Alt_jump", 1f);
+            horizontal_m = Input.GetAxisRaw("Horizontal") * run_speed;
+            animator.SetFloat("Speed", Mathf.Abs(horizontal_m));
+            if (Input.GetButtonDown("Jump"))
+            {
+                jump = true;
+                animator.SetFloat("Alt_jump", 1f);
+            }
+
+            if (Input.GetButtonDown("Crouch"))
+            {
+                crouch = true;
+            }
+            else if (Input.GetButtonUp("Crouch"))
+            {
+                crouch = false;
+            }
         }
-
-        if (Input.GetButtonDown("Crouch"))
+        else if (GlobalManage.Instance.timer_flag == false)
         {
-            crouch = true;
-        } else if(Input.GetButtonUp("Crouch"))
-        {
-            crouch = false;
+            horizontal_m = 0;
+            animator.SetFloat("Speed", Mathf.Abs(horizontal_m));
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                Debug.Log(GlobalManage.Instance.timer_flag);
+                GlobalManage.Instance.timer_flag = true;
+                timer = 3;
+                Debug.Log(GlobalManage.Instance.timer_flag);
+            }
         }
     }
 

@@ -10,8 +10,11 @@ namespace Global
 
         [SerializeField]
         private float m_speed;
+        [SerializeField]
+        private bool m_timer_flag=true;
 
         public float speed { get { return m_speed; } set { m_speed = value; } }
+        public bool timer_flag { get { return m_timer_flag; } set { m_timer_flag = value; } }
 
         private void Awake()
         {

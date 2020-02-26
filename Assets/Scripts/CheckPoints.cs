@@ -10,6 +10,9 @@ public class CheckPoints : MonoBehaviour
     public GameObject[] enemySpawn;
     public GameObject[] enemies;
 
+    public float timer=3;
+    private bool activationT=false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +23,13 @@ public class CheckPoints : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "hole")
         {
+            GlobalManage.Instance.timer_flag = false;
             for (int i = 0; i < spawners.Length; i++)
             {
                 if (collision.name == holes[i].name)
@@ -37,12 +40,13 @@ public class CheckPoints : MonoBehaviour
         }
         if (collision.tag == "Enemy")
         {
+            GlobalManage.Instance.timer_flag = false;
             for (int i = 0; i < enemySpawn.Length; i++)
             {
                 if (collision.name == enemies[i].name)
                 {
                     transform.position = enemySpawn[i].transform.position;
-                    if(collision.name == enemies[6].name)
+                    if(collision.name == enemies[17].name)
                     {
                        GlobalManage.Instance.speed += 1;
                     }
