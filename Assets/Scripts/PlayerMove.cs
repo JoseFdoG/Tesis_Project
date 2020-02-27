@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Global;
+using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -14,12 +15,20 @@ public class PlayerMove : MonoBehaviour
     bool jump = false;
     bool crouch = false;
     float timer=3;
+    public Text time_text;
+    public GameObject time_text_obj;
+
+    private void Start()
+    {
+        time_text.text = timer.ToString();
+    }
 
     // Update is called once per frame
     void Update()
     {
         if (GlobalManage.Instance.timer_flag == true)
         {
+            time_text_obj.SetActive(false);
             horizontal_m = Input.GetAxisRaw("Horizontal") * run_speed;
             animator.SetFloat("Speed", Mathf.Abs(horizontal_m));
             if (Input.GetButtonDown("Jump"))
@@ -39,15 +48,18 @@ public class PlayerMove : MonoBehaviour
         }
         else if (GlobalManage.Instance.timer_flag == false)
         {
+            time_text_obj.SetActive(true);
             horizontal_m = 0;
             animator.SetFloat("Speed", Mathf.Abs(horizontal_m));
             timer -= Time.deltaTime;
-            if (timer <= 0)
+            time_text.text = Mathf.Round(timer).ToString();
+            if (timer <= 1)
             {
-                Debug.Log(GlobalManage.Instance.timer_flag);
+                //Debug.Log(GlobalManage.Instance.timer_flag);
                 GlobalManage.Instance.timer_flag = true;
                 timer = 3;
-                Debug.Log(GlobalManage.Instance.timer_flag);
+                time_text.text = Mathf.Round(timer).ToString();
+                //Debug.Log(GlobalManage.Instance.timer_flag);
             }
         }
     }

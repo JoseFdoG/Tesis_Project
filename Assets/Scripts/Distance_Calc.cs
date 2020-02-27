@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Global;
 
 public class Distance_Calc : MonoBehaviour
 {
@@ -24,7 +25,12 @@ public class Distance_Calc : MonoBehaviour
         for (int i = 0; i < enemiesPos.Length; i++)
         {
             float magnitude= Vector2.Distance(gameObject.transform.position, enemiesPos[i].position);
-            if (distances[i] > magnitude) distances[i] = magnitude;
+
+            if (distances[i] > magnitude)
+            {
+                distances[i] = magnitude;
+                GlobalManage.Instance.distance_Enem[i] = distances[i];
+            }
         }
     }
 }

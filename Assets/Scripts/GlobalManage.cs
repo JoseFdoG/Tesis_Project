@@ -11,10 +11,14 @@ namespace Global
         [SerializeField]
         private float m_speed;
         [SerializeField]
-        private bool m_timer_flag=true;
+        private bool m_timer_flag = true;
+        [SerializeField]
+        private float[] m_distances;
+
 
         public float speed { get { return m_speed; } set { m_speed = value; } }
         public bool timer_flag { get { return m_timer_flag; } set { m_timer_flag = value; } }
+        public float [] distance_Enem { get { return m_distances; }set { m_distances = value; } }
 
         private void Awake()
         {
