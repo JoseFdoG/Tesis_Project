@@ -65,12 +65,13 @@
     <Compile Include="Assets\Scripts\Camera_Move.cs" />
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\CheckPoints.cs" />
+    <Compile Include="Assets\Scripts\DataManager.cs" />
     <Compile Include="Assets\Scripts\Distance_Calc.cs" />
     <Compile Include="Assets\Scripts\Enemy_Move.cs" />
     <Compile Include="Assets\Scripts\GlobalManage.cs" />
     <Compile Include="Assets\Scripts\Loop.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
-    <None Include="Assets\Sprite Pack\Tap and Fly\Readme.txt" />
+    <Compile Include="Assets\Scripts\SceneManager.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Usuario/Desktop/New Unity Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

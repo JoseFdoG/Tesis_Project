@@ -36,15 +36,6 @@ public class PlayerMove : MonoBehaviour
                 jump = true;
                 animator.SetFloat("Alt_jump", 1f);
             }
-
-            if (Input.GetButtonDown("Crouch"))
-            {
-                crouch = true;
-            }
-            else if (Input.GetButtonUp("Crouch"))
-            {
-                crouch = false;
-            }
         }
         else if (GlobalManage.Instance.timer_flag == false)
         {

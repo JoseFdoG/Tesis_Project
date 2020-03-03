@@ -20,28 +20,27 @@ namespace Global
         public bool timer_flag { get { return m_timer_flag; } set { m_timer_flag = value; } }
         public float [] distance_Enem { get { return m_distances; }set { m_distances = value; } }
 
+
+        private DataManager dataManager; 
+
         private void Awake()
         {
             if(Instance==null)
             {
                 Instance = this;
                 DontDestroyOnLoad(gameObject);
+                dataManager = GetComponent<DataManager>();
             }
             else
             {
                 Destroy(gameObject);
             }
-        }
-        // Start is called before the first frame update
-        void Start()
-        {
 
         }
 
-        // Update is called once per frame
-        void Update()
+        public DataManager GetDataManager()
         {
-
+            return dataManager;
         }
     }
 }
