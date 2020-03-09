@@ -6,7 +6,6 @@ using Global;
 public class Distance_Calc : MonoBehaviour
 {
     public Transform[] enemiesPos;
-    public float[] distances;
 
     // Start is called before the first frame update
     void Start()
@@ -14,7 +13,7 @@ public class Distance_Calc : MonoBehaviour
         Debug.Log(enemiesPos.Length);
         for (int i = 0; i < enemiesPos.Length; i++)
         {
-            distances[i] = 1000;
+            GlobalManage.Instance.distance_Enem[i] = 1000;
         }
 
     }
@@ -26,10 +25,9 @@ public class Distance_Calc : MonoBehaviour
         {
             float magnitude= Vector2.Distance(gameObject.transform.position, enemiesPos[i].position);
 
-            if (distances[i] > magnitude)
+            if (GlobalManage.Instance.distance_Enem[i] > magnitude)
             {
-                distances[i] = magnitude;
-                GlobalManage.Instance.distance_Enem[i] = distances[i];
+                GlobalManage.Instance.distance_Enem[i] = magnitude;
             }
         }
     }

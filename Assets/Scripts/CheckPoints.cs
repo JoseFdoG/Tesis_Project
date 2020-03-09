@@ -46,10 +46,6 @@ public class CheckPoints : MonoBehaviour
                 if (collision.name == enemies[i].name)
                 {
                     transform.position = enemySpawn[i].transform.position;
-                    if(collision.name == enemies[17].name)
-                    {
-                       GlobalManage.Instance.speed += 1;
-                    }
                 }
             }
         }

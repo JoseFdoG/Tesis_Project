@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0a177b9bb1d149a414791ec21f003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 0
   length: 0
   divider: 0
   moveSpots:
@@ -697,7 +697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0a177b9bb1d149a414791ec21f003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   length: 3.2
   divider: 12
   moveSpots: []
@@ -867,7 +867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0a177b9bb1d149a414791ec21f003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 0
   length: 0
   divider: 0
   moveSpots:
@@ -1287,6 +1287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79fcf73db593a4944aa4b38557e3c4d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players:
+    participant: []
 --- !u!1 &271332773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,7 +1818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0a177b9bb1d149a414791ec21f003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   length: 3.2
   divider: 12
   moveSpots: []
@@ -2041,7 +2043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0a177b9bb1d149a414791ec21f003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 0
   length: 0
   divider: 0
   moveSpots:
@@ -2401,7 +2403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0a177b9bb1d149a414791ec21f003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 0
   length: 0
   divider: 0
   moveSpots:
@@ -2588,7 +2590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0a177b9bb1d149a414791ec21f003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   length: 3.2
   divider: 6
   moveSpots: []
@@ -18383,7 +18385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0a177b9bb1d149a414791ec21f003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   length: 3.2
   divider: 4
   moveSpots: []
@@ -19021,25 +19023,6 @@ MonoBehaviour:
   - {fileID: 52987870}
   - {fileID: 169520749}
   - {fileID: 1744922472}
-  distances:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
 --- !u!114 &1247965733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19052,7 +19035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f4b587e693933f42990cfdf22e44b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  final_enemy: {fileID: 1744922471}
 --- !u!1 &1250792111
 GameObject:
   m_ObjectHideFlags: 0
@@ -19707,7 +19690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0a177b9bb1d149a414791ec21f003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   length: 3.2
   divider: 0
   moveSpots: []
@@ -20199,7 +20182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0a177b9bb1d149a414791ec21f003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   length: 3.2
   divider: 8
   moveSpots: []
@@ -20564,7 +20547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0a177b9bb1d149a414791ec21f003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   length: 3.2
   divider: 0
   moveSpots: []
@@ -20902,7 +20885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0a177b9bb1d149a414791ec21f003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   length: 3.2
   divider: 8
   moveSpots: []
@@ -21237,7 +21220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0a177b9bb1d149a414791ec21f003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   length: 3.2
   divider: 10
   moveSpots: []
@@ -21358,7 +21341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0a177b9bb1d149a414791ec21f003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 0
   length: 0
   divider: 0
   moveSpots:
@@ -21519,7 +21502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0a177b9bb1d149a414791ec21f003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   length: 3.2
   divider: 4
   moveSpots: []
@@ -21988,7 +21971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0a177b9bb1d149a414791ec21f003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 1
   length: 0
   divider: 0
   moveSpots:
@@ -22120,7 +22103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0a177b9bb1d149a414791ec21f003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   length: 3.2
   divider: 6
   moveSpots: []
@@ -22347,7 +22330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0a177b9bb1d149a414791ec21f003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   length: 3.2
   divider: 10
   moveSpots: []

@@ -22,7 +22,6 @@ public class Loop : MonoBehaviour
         if(collision.tag=="Gate")
         {
             transform.position = new Vector3(begin.position.x,begin.position.y,0);
-            GlobalManage.Instance.speed += 1;
         }
     }
 }

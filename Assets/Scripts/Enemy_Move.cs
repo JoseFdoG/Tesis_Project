@@ -6,7 +6,7 @@ using Global;
 
 public class Enemy_Move : MonoBehaviour
 {
-    public float speed;
+    public int speed;
     public float length;
     public float divider;
     public Transform[] moveSpots; //Just Valid for the  move n7
